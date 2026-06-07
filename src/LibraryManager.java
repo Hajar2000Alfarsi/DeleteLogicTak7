@@ -24,20 +24,22 @@ public class LibraryManager {
         }
 
         for (LibraryMember member : members) {
-            System.out.println(member);
+            System.out.println("Member ID: " + member.getMemberId() + "\n" +
+                    "Full Name: " + member.getFullName() + "\n" +
+                    "Membership Type: " + member.getMembershipType() + "\n");
         }
     }
 
     public boolean deleteMemberById(String memberId) {
         for (int i = 0; i < members.size(); i++) {
             if (members.get(i).getMemberId().equals(memberId)) {
-                members.remove(memberId);
-                System.out.println("Member with ID " + memberId + " deleted successfully.");
+                members.remove(i);
+                System.out.println("Member with ID " + memberId + " deleted successfully." + "\n");
 
                 return true;
             }
         }
-        System.out.println("Member not found.");
+        System.out.println("Member not found." + "\n");
         return false;
     }
 
