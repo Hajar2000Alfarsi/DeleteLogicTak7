@@ -17,4 +17,17 @@ public class LibraryManager {
         members.add(member);
     }
 
+    public void displayMembers(){
+        if (members.isEmpty()) {
+            System.out.println("No members found.");
+            return;
+        }
+
+        for (LibraryMember member : members) {
+            System.out.println(member);
+        }
+    }
+
+
+
 }
