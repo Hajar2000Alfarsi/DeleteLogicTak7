@@ -16,6 +16,22 @@ public class DeleteTaskDemo {
         String targetTask = "Call doctor";
         boolean isDeleted = false;
 
+        for (int i = 0; i < tasks.size(); i++) {
+            if (tasks.get(i).equalsIgnoreCase(targetTask)) {
+                tasks.remove(i);
+                isDeleted = true;
+                System.out.println("\nTask " + targetTask + " deleted successfully.");
+                break;
+            }
+        }
 
+        if (!isDeleted) {
+            System.out.println("Task not found, no deletion performed");
+        }
+
+        System.out.println("\n---Final Task List---");
+        for (String task : tasks) {
+            System.out.println(task);
+        }
     }
 }
