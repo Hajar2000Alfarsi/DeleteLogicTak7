@@ -6,5 +6,16 @@ public class DeleteTaskDemo {
         tasks.add("Buy groceries");
         tasks.add("Call doctor");
         tasks.add("Finish report");
+
+        System.out.println("---Initial Task List---");
+
+        for (String task : tasks) {
+            System.out.println(task);
+        }
+
+        String targetTask = "Call doctor";
+        boolean isDeleted = false;
+
+
     }
 }
